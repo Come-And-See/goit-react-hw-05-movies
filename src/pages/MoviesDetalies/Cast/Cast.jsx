@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import * as css from './Cast.styled';
 import axios from 'axios';
-import PropTypes from 'prop-types';
+
 
 
 const Cast = () => {
@@ -40,14 +40,6 @@ const Cast = () => {
     )
 }
 
-Cast.propTypes = {
-    films: PropTypes.arrayOf(
-        PropTypes.shape({
-            profile_path: PropTypes.string,
-            character: PropTypes.string,
-            name: PropTypes.string
-        })
-    )
-};
+
 
 export default Cast

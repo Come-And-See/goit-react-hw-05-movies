@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import * as css from './Trending.styled';
 import axios from 'axios';
-import PropTypes from 'prop-types';
-
 
 
 const Trending = () => {
@@ -31,14 +29,5 @@ const Trending = () => {
   )
 }
 
-Trending.propTypes = {
-  films: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string,
-      name: PropTypes.string
-    })
-  )
-};
 
 export default Trending

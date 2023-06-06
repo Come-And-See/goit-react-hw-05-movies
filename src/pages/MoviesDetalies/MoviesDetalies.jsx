@@ -2,15 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom'
 import * as css from './MoviesDetalies.styled';
 import axios from 'axios';
-import PropTypes from 'prop-types';
+
 
 
 const MoviesDetalies = () => {
   const { moviesID } = useParams();
   const [films, setFilms] = useState([]);
   const location = useLocation();
-
-
 
 
   useEffect(() => {
@@ -57,15 +55,6 @@ const MoviesDetalies = () => {
   )
 }
 
-MoviesDetalies.propTypes = {
-  films: PropTypes.shape({
-    poster_path: PropTypes.string,
-    title: PropTypes.string,
-    release_date: PropTypes.string,
-    vote_average: PropTypes.number,
-    overview: PropTypes.string,
-    genres: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string }))
-  })
-};
+
 
 export default MoviesDetalies

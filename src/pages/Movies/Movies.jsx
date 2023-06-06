@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import * as css from './Movies.styled';
 import axios from 'axios';
-import PropTypes from 'prop-types';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 const Movies = () => {
@@ -53,14 +52,5 @@ const Movies = () => {
     )
 }
 
-Movies.propTypes = {
-    films: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            title: PropTypes.string,
-            name: PropTypes.string
-        })
-    )
-};
 
 export default Movies

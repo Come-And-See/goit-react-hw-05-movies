@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import * as css from './Reviews.styled';
 import axios from 'axios';
-import PropTypes from 'prop-types';
+
 
 
 const Reviews = () => {
@@ -21,8 +21,6 @@ const Reviews = () => {
     }, [moviesID]);
 
 
-
-
     return (
         <>
             <css.Block>
@@ -35,13 +33,5 @@ const Reviews = () => {
     )
 }
 
-Reviews.propTypes = {
-    films: PropTypes.arrayOf(
-        PropTypes.shape({
-            author: PropTypes.string,
-            content: PropTypes.string
-        })
-    )
-};
 
 export default Reviews
