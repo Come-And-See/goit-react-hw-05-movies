@@ -48,7 +48,8 @@ const MoviesDetalies = () => {
             <css.InfoTitle>Additional information</css.InfoTitle>
             <css.Info to="cast" state={{ from: location.state?.from }}>Cast</css.Info>
             <css.Info to="reviews" state={{ from: location.state?.from }}>Reviews</css.Info>
-          </div></div>
+          </div>
+        </div>
         <Outlet />
       </css.Block>
 
